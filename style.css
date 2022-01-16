@@ -1,0 +1,69 @@
+#inputPanel {
+    width: 300px;
+    min-height: 50px;
+    background-color: lightgrey;
+}
+
+#inputPanel:hover {
+    background-color: rgba(167, 164, 164, 0.582);
+}
+
+#displayCase {
+    display: flex;
+    width: 1000px;
+    height: 200px;
+    border: 12px;
+    border-style: solid;
+    border-color: rgb(95, 43, 6);
+    background-color: wheat;
+    align-items: center;
+    margin-top: 5px;
+}
+
+.book {
+    height: 160px;
+    width: 70px;
+    margin: 10px;
+    background-color: saddlebrown;
+    border-style: solid;
+    border: 2px;
+    border-color: rgb(95, 43, 6);
+    writing-mode: vertical-lr;
+    font-family: monospace;
+    font-size: medium;
+    font-weight: bold;
+    color:snow;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.book:hover {
+    height: 161px;
+    width: 70px;
+    margin: 10px;
+    background-color: rgb(129, 64, 17);
+    
+}
+
+#bookInformation {
+    width: 300px;
+}
+
+#openBook {
+    height: 380px;
+    width: 600px;
+    border: 9px;
+    border-style: solid;
+    border-color: saddlebrown;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    background-image: url(./images/openbookedit.png);
+    background-position: center center;
+}
+
+#removeBookButton {
+    justify-content: right;
+}
