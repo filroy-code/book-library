@@ -1,26 +1,25 @@
-function bookAdd(title, author, pages, haveRead) {
-    this.title = title,
-    this.author = author,
-    this.pages = pages,
-    this.haveRead = haveRead
-    this.info = function() {
-        let info = {
-            title,
-            author,
-            pages,
-            haveRead,
-        }
-    return info;
+class BookAdd {
+    constructor(title, author, pages, haveRead) {
+        this.title = title;
+        this. author = author;
+        this. pages = pages;
+        this.haveRead = haveRead
+    }
+    info() {
+        return {title: this.title,
+                author: this.author,
+                pages: this.pages,
+                haveRead: this.haveRead,}
     }
 }
 
 let activeBook
 
-const book1 = new bookAdd("Infinite Jest", "David Foster Wallace", 1000, true)
-const book2 = new bookAdd("Cat's Cradle", "Kurt Vonnegut", 300, true)
-const book3 = new bookAdd("The Corrections", "Jonathan Franzen", 600, true)
-const book4 = new bookAdd("Catch-22", "Joseph Heller", 550, true)
-const book5 = new bookAdd("Twilight", "Stephanie Meyer", 300, false)
+const book1 = new BookAdd("Infinite Jest", "David Foster Wallace", 1000, true)
+const book2 = new BookAdd("Cat's Cradle", "Kurt Vonnegut", 300, true)
+const book3 = new BookAdd("The Corrections", "Jonathan Franzen", 600, true)
+const book4 = new BookAdd("Catch-22", "Joseph Heller", 550, true)
+const book5 = new BookAdd("Twilight", "Stephanie Meyer", 300, false)
 
 let shelf = []
 shelf.push(book1, book2, book3, book4, book5);
@@ -108,7 +107,7 @@ function addBook() {
     let author = prompt("Author:")
     let pages = prompt("# of pages:")
     let haveRead = confirm("Have you read this book")
-    const theBook = new bookAdd(`${title}`, `${author}`, pages, haveRead)
+    let theBook = new BookAdd (title, author, pages, haveRead)
     shelf.push(theBook)
     upDateShelf()
 }
